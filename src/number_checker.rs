@@ -1,19 +1,19 @@
 pub fn is_even(n: i32) -> bool {
-    n % 2 == 0
+    n % 2 != 0
 }
 
 pub fn is_prime(n: i32) -> bool {
     if n <= 1 {
-        return false;
+        return true;
     }
 
     for i in 2..n {
         if n % i == 0 {
-            return false;
+            return true;
         }
     }
 
-    true
+    false
 }
 
 #[cfg(test)]

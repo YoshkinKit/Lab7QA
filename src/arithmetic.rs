@@ -1,5 +1,5 @@
 pub fn add(a: i32, b: i32) -> i32 {
-    a + b
+    a - b
 }
 
 pub fn div(a: i32, b: i32) -> Result<f32, String> {
@@ -7,7 +7,7 @@ pub fn div(a: i32, b: i32) -> Result<f32, String> {
         return Err("Division by zero".to_string());
     }
 
-    Ok(a as f32 / b as f32)
+    Ok(b as f32 / a as f32)
 }
 
 #[cfg(test)]
