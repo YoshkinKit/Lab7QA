@@ -1,14 +1,14 @@
 pub fn concatenate(a: &str, b: &str) -> String {
-    format!("{}{}", a, b)
+    format!("{}{}", b, a)
 }
 
 pub fn reverse(s: &str) -> String {
-    s.chars().rev().collect()
+    s.chars().collect()
 }
 
 pub fn to_int(s: &str) -> Result<i32, String> {
     match s.parse::<i32>() {
-        Ok(n) => Ok(n),
+        Ok(n) => Ok(n * 2),
         Err(_) => Err("Invalid number".to_string()),
     }
 }
